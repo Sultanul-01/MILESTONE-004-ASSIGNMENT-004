@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind link -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .font-style {
+        font-family: "Open Sans", sans-serif;
+      }
+    </style>
+    <title>Job-Application-Tracker</title>
+  </head>
+  <body class="font-style w-[1110px] mx-auto bg-[#F8FAFC]">
+    <section id="" class="mb-[30px]">
+      <h3 class="text-[#002C5C] font-bold text-4xl">Job Application Tracker</h3>
+      <br />
+      <div class="flex gap-4">
+        <div
+          class="pl-4 py-5 w-[360px] rounded-[8px] text-[#323B49] bg-[#FFFFFF] shadow-xl"
+        >
+          <p class="font-medium">Total</p>
+          <p class="font-bold text-[#002C5C]">8</p>
+        </div>
+        <div
+          class="pl-4 py-5 w-[360px] rounded-[8px] text-[#323B49] bg-[#FFFFFF] shadow-xl"
+        >
+          <p class="font-medium">Interview</p>
+          <p class="font-bold text-[#10B981]">0</p>
+        </div>
+        <div
+          class="pl-4 py-5 w-[360px] rounded-[8px] text-[#323B49] bg-[#FFFFFF] shadow-xl"
+        >
+          <p class="font-medium">Rejected</p>
+          <p class="font-bold text-[#EF4444]">0</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="flex justify-between">
+        <p class="font-bold">Available Jobs</p>
+        <br /><br />
+        <p>8 jobs</p>
+      </div>
+      <div class="flex gap-3">
+        <button
+          class="cursor-pointer bg-[#3B82F6] text-[#FFFFFF] rounded-[4px] px-10 py-1"
+        >
+          All
+        </button>
+        <button class="cursor-pointer rounded-[4px] px-1.5 py-1 bg-[#FFFFFF]">
+          Interview
+        </button>
+        <button class="cursor-pointer rounded-[4px] px-1.5 py-1 bg-[#FFFFFF]">
+          Rejected
+        </button>
+      </div>
+      <br />
+      <div class="gap-5 flex flex-col">
+        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+          <div class="flex justify-between">
+            <div>
+              <p class="font-semibold text-[18px]">Mobile First Corp</p>
+              <p class="text-[16px]">React Native Developer</p>
+            </div>
+            <button
+              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+            >
+              <i class="fa-solid fa-trash-can text-[#64748B]"></i>
+            </button>
+          </div>
+          <p class="mb-4 text-[14px]">
+            Remote • Full-time • $130,000 - $175,000
+          </p>
+          <button
+            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+          >
+            NOT APPLIED
+          </button>
+          <p class="mb-3">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+          <button
+            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+          >
+            INTERVIEW
+          </button>
+          <button
+            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+          >
+            REJECTED
+          </button>
+        </div>
+        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+          <div class="flex justify-between">
+            <div>
+              <p class="font-semibold text-[18px]">Mobile First Corp</p>
+              <p class="text-[16px]">React Native Developer</p>
+            </div>
+            <button
+              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+            >
+              <i class="fa-solid fa-trash-can text-[#64748B]"></i>
+            </button>
+          </div>
+          <p class="mb-4 text-[14px]">
+            Remote • Full-time • $130,000 - $175,000
+          </p>
+          <button
+            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+          >
+            NOT APPLIED
+          </button>
+          <p class="mb-3">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+          <button
+            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+          >
+            INTERVIEW
+          </button>
+          <button
+            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+          >
+            REJECTED
+          </button>
+        </div>
+        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+          <div class="flex justify-between">
+            <div>
+              <p class="font-semibold text-[18px]">Mobile First Corp</p>
+              <p class="text-[16px]">React Native Developer</p>
+            </div>
+            <button
+              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+            >
+              <i class="fa-solid fa-trash-can text-[#64748B]"></i>
+            </button>
+          </div>
+          <p class="mb-4 text-[14px]">
+            Remote • Full-time • $130,000 - $175,000
+          </p>
+          <button
+            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+          >
+            NOT APPLIED
+          </button>
+          <p class="mb-3">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+          <button
+            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+          >
+            INTERVIEW
+          </button>
+          <button
+            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+          >
+            REJECTED
+          </button>
+        </div>
+        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+          <div class="flex justify-between">
+            <div>
+              <p class="font-semibold text-[18px]">Mobile First Corp</p>
+              <p class="text-[16px]">React Native Developer</p>
+            </div>
+            <button
+              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+            >
+              <i class="fa-solid fa-trash-can text-[#64748B]"></i>
+            </button>
+          </div>
+          <p class="mb-4 text-[14px]">
+            Remote • Full-time • $130,000 - $175,000
+          </p>
+          <button
+            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+          >
+            NOT APPLIED
+          </button>
+          <p class="mb-3">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+          <button
+            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+          >
+            INTERVIEW
+          </button>
+          <button
+            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+          >
+            REJECTED
+          </button>
+        </div>
+        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+          <div class="flex justify-between">
+            <div>
+              <p class="font-semibold text-[18px]">Mobile First Corp</p>
+              <p class="text-[16px]">React Native Developer</p>
+            </div>
+            <button
+              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+            >
+              <i class="fa-solid fa-trash-can text-[#64748B]"></i>
+            </button>
+          </div>
+          <p class="mb-4 text-[14px]">
+            Remote • Full-time • $130,000 - $175,000
+          </p>
+          <button
+            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+          >
+            NOT APPLIED
+          </button>
+          <p class="mb-3">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+          <button
+            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+          >
+            INTERVIEW
+          </button>
+          <button
+            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+          >
+            REJECTED
+          </button>
+        </div>
+        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+          <div class="flex justify-between">
+            <div>
+              <p class="font-semibold text-[18px]">Mobile First Corp</p>
+              <p class="text-[16px]">React Native Developer</p>
+            </div>
+            <button
+              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+            >
+              <i class="fa-solid fa-trash-can text-[#64748B]"></i>
+            </button>
+          </div>
+          <p class="mb-4 text-[14px]">
+            Remote • Full-time • $130,000 - $175,000
+          </p>
+          <button
+            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+          >
+            NOT APPLIED
+          </button>
+          <p class="mb-3">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+          <button
+            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+          >
+            INTERVIEW
+          </button>
+          <button
+            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+          >
+            REJECTED
+          </button>
+        </div>
+        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+          <div class="flex justify-between">
+            <div>
+              <p class="font-semibold text-[18px]">Mobile First Corp</p>
+              <p class="text-[16px]">React Native Developer</p>
+            </div>
+            <button
+              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+            >
+              <i class="fa-solid fa-trash-can text-[#64748B]"></i>
+            </button>
+          </div>
+          <p class="mb-4 text-[14px]">
+            Remote • Full-time • $130,000 - $175,000
+          </p>
+          <button
+            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+          >
+            NOT APPLIED
+          </button>
+          <p class="mb-3">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+          <button
+            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+          >
+            INTERVIEW
+          </button>
+          <button
+            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+          >
+            REJECTED
+          </button>
+        </div>
+        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+          <div class="flex justify-between">
+            <div>
+              <p class="font-semibold text-[18px]">Mobile First Corp</p>
+              <p class="text-[16px]">React Native Developer</p>
+            </div>
+            <button
+              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+            >
+              <i class="fa-solid fa-trash-can text-[#64748B]"></i>
+            </button>
+          </div>
+          <p class="mb-4 text-[14px]">
+            Remote • Full-time • $130,000 - $175,000
+          </p>
+          <button
+            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+          >
+            NOT APPLIED
+          </button>
+          <p class="mb-3">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+          <button
+            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+          >
+            INTERVIEW
+          </button>
+          <button
+            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+          >
+            REJECTED
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="Script/script.js"></script>
+  </body>
+</html>

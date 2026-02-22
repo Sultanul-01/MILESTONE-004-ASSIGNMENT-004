@@ -38,59 +38,68 @@
           class="pl-4 py-5 w-[360px] rounded-[8px] text-[#323B49] bg-[#FFFFFF] shadow-xl"
         >
           <p class="font-medium">Total</p>
-          <p class="font-bold text-[#002C5C]">8</p>
+          <p id="total" class="font-bold text-[#002C5C]">0</p>
         </div>
         <div
           class="pl-4 py-5 w-[360px] rounded-[8px] text-[#323B49] bg-[#FFFFFF] shadow-xl"
         >
           <p class="font-medium">Interview</p>
-          <p class="font-bold text-[#10B981]">0</p>
+          <p id="interview" class="font-bold text-[#10B981]">0</p>
         </div>
         <div
           class="pl-4 py-5 w-[360px] rounded-[8px] text-[#323B49] bg-[#FFFFFF] shadow-xl"
         >
           <p class="font-medium">Rejected</p>
-          <p class="font-bold text-[#EF4444]">0</p>
+          <p id="rejected" class="font-bold text-[#EF4444]">0</p>
         </div>
       </div>
     </section>
-    <section>
+    <main>
       <div class="flex justify-between">
         <p class="font-bold">Available Jobs</p>
         <br /><br />
-        <p>8 jobs</p>
+        <p>0 jobs</p>
       </div>
       <div class="flex gap-3">
         <button
+          onclick="toggleEvent('all-filter-btn')"
+          id="all-filter-btn"
           class="cursor-pointer bg-[#3B82F6] text-[#FFFFFF] rounded-[4px] px-10 py-1"
         >
           All
         </button>
-        <button class="cursor-pointer rounded-[4px] px-1.5 py-1 bg-[#FFFFFF]">
+        <button
+          onclick="toggleEvent('interview-filter-btn')"
+          id="interview-filter-btn"
+          class="cursor-pointer rounded-[4px] px-4 py-1 bg-[#FFFFFF]"
+        >
           Interview
         </button>
-        <button class="cursor-pointer rounded-[4px] px-1.5 py-1 bg-[#FFFFFF]">
+        <button
+          onclick="toggleEvent('rejected-filter-btn')"
+          id="rejected-filter-btn"
+          class="cursor-pointer rounded-[4px] px-4 py-1 bg-[#FFFFFF]"
+        >
           Rejected
         </button>
       </div>
       <br />
-      <div
-        class="text-center bg-[#FFFFFF] shadow-xl rounded-[8px] py-20 hidden"
-      >
-        <p class="text-[#7DA8FF] text-6xl">
+      <div id="filtered-cards" class="space-y-5 hidden">
+        <!-- class="text-center bg-[#FFFFFF] shadow-xl rounded-[8px] py-20 hidden" -->
+        <!-- <p class="text-[#7DA8FF] text-6xl">
           <i class="fa-solid fa-file-lines"></i>
         </p>
         <br />
         <h3 class="font-bold text-lg">No jobs available</h3>
-        <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+        <p class="text-[#64748B]">Check back soon for new job opportunities</p> -->
       </div>
       <br />
-      <div class="gap-5 flex flex-col">
+      <div id="allCards" class="gap-5 flex flex-col">
         <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
-              <p class="font-semibold text-[18px]">Mobile First Corp</p>
-              <p class="text-[16px]">React Native Developer</p>
+              <p class="jobName font-semibold text-[18px]">Mobile First Corp</p>
+              <p class="jobTitle text-[16px]">React Native Developer</p>
             </div>
             <button
               class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
@@ -98,25 +107,25 @@
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
           </div>
-          <p class="mb-4 text-[14px]">
+          <p class="salary mb-4 text-[14px]">
             Remote • Full-time • $130,000 - $175,000
           </p>
           <button
-            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+            class="status cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
           >
             NOT APPLIED
           </button>
-          <p class="mb-3">
+          <p class="jobInfo mb-3">
             Build cross-platform mobile applications using React Native. Work on
             products used by millions of users worldwide.
           </p>
           <button
-            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+            class="interview-btn cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
           >
             INTERVIEW
           </button>
           <button
-            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+            class="rejected-btn cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
           >
             REJECTED
           </button>
@@ -124,8 +133,8 @@
         <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
-              <p class="font-semibold text-[18px]">WebFlow Agency</p>
-              <p class="text-[16px]">Web Designer & Developer</p>
+              <p class="jobName font-semibold text-[18px]">WebFlow Agency</p>
+              <p class="jobTitle text-[16px]">Web Designer & Developer</p>
             </div>
             <button
               class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
@@ -133,25 +142,25 @@
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
           </div>
-          <p class="mb-4 text-[14px]">
+          <p class="salary mb-4 text-[14px]">
             Los Angeles, CA • Part-time • $80,000 - $120,000
           </p>
           <button
-            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+            class="status cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
           >
             NOT APPLIED
           </button>
-          <p class="mb-3">
+          <p class="jobInfo mb-3">
             Create stunning web experiences for high-profile clients. Must have
             portfolio and experience with modern web design trends.
           </p>
           <button
-            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+            class="interview-btn cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
           >
             INTERVIEW
           </button>
           <button
-            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+            class="rejected-btn cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
           >
             REJECTED
           </button>
@@ -159,8 +168,8 @@
         <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
-              <p class="font-semibold text-[18px]">DataViz Solutions</p>
-              <p class="text-[16px]">Data Visualization Specialist</p>
+              <p class="jobName font-semibold text-[18px]">DataViz Solutions</p>
+              <p class="jobTitle text-[16px]">Data Visualization Specialist</p>
             </div>
             <button
               class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
@@ -168,25 +177,25 @@
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
           </div>
-          <p class="mb-4 text-[14px]">
+          <p class="salary mb-4 text-[14px]">
             Boston, MA • Full-time • $125,000 - $165,000
           </p>
           <button
-            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+            class="status cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
           >
             NOT APPLIED
           </button>
-          <p class="mb-3">
+          <p class="jobInfo mb-3">
             Transform complex data into compelling visualizations. Required
             skills: D3.js, React, and strong analytical thinking.
           </p>
           <button
-            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+            class="interview-btn cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
           >
             INTERVIEW
           </button>
           <button
-            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+            class="rejected-btn cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
           >
             REJECTED
           </button>
@@ -194,8 +203,8 @@
         <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
-              <p class="font-semibold text-[18px]">CloudFirst Inc</p>
-              <p class="text-[16px]">Backend Developer</p>
+              <p class="jobName font-semibold text-[18px]">CloudFirst Inc</p>
+              <p class="jobTitle text-[16px]">Backend Developer</p>
             </div>
             <button
               class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
@@ -203,25 +212,25 @@
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
           </div>
-          <p class="mb-4 text-[14px]">
+          <p class="salary mb-4 text-[14px]">
             Seattle, WA • Full-time • $140,000 - $190,000
           </p>
           <button
-            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+            class="status cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
           >
             NOT APPLIED
           </button>
-          <p class="mb-3">
+          <p class="jobInfo mb-3">
             Design and maintain scalable backend systems using Python and AWS.
             Work with modern DevOps practices and cloud infrastructure.
           </p>
           <button
-            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+            class="interview-btn cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
           >
             INTERVIEW
           </button>
           <button
-            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+            class="rejected-btn cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
           >
             REJECTED
           </button>
@@ -229,8 +238,8 @@
         <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
-              <p class="font-semibold text-[18px]">Innovation Labs</p>
-              <p class="text-[16px]">UI/UX Engineer</p>
+              <p class="jobName font-semibold text-[18px]">Innovation Labs</p>
+              <p class="jobTitle text-[16px]">UI/UX Engineer</p>
             </div>
             <button
               class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
@@ -238,26 +247,26 @@
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
           </div>
-          <p class="mb-4 text-[14px]">
+          <p class="salary mb-4 text-[14px]">
             Austin, TX • Full-time • $110,000 - $150,000
           </p>
           <button
-            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+            class="status cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
           >
             NOT APPLIED
           </button>
-          <p class="mb-3">
+          <p class="jobInfo mb-3">
             Create beautiful and functional user interfaces for our suite of
             products. Strong design skills and frontend development expertise
             required.
           </p>
           <button
-            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+            class="interview-btn cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
           >
             INTERVIEW
           </button>
           <button
-            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+            class="rejected-btn cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
           >
             REJECTED
           </button>
@@ -265,8 +274,10 @@
         <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
-              <p class="font-semibold text-[18px]">MegaCorp Solutions</p>
-              <p class="text-[16px]">JavaScript Developer</p>
+              <p class="jobName font-semibold text-[18px]">
+                MegaCorp Solutions
+              </p>
+              <p class="jobTitle text-[16px]">JavaScript Developer</p>
             </div>
             <button
               class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
@@ -274,26 +285,26 @@
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
           </div>
-          <p class="mb-4 text-[14px]">
+          <p class="salary mb-4 text-[14px]">
             New York, NY • Full-time • $130,000 - $170,00
           </p>
           <button
-            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+            class="status cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
           >
             NOT APPLIED
           </button>
-          <p class="mb-3">
+          <p class="jobInfo mb-3">
             Build enterprise applications with JavaScript and modern frameworks.
             We offer competitive compensation, health insurance, and
             professional development opportunities.
           </p>
           <button
-            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+            class="interview-btn cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
           >
             INTERVIEW
           </button>
           <button
-            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+            class="rejected-btn cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
           >
             REJECTED
           </button>
@@ -301,8 +312,10 @@
         <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
-              <p class="font-semibold text-[18px]">TechCorp Industries</p>
-              <p class="text-[16px]">Senior Frontend Developer</p>
+              <p class="jobName font-semibold text-[18px]">
+                TechCorp Industries
+              </p>
+              <p class="jobTitle text-[16px]">Senior Frontend Developer</p>
             </div>
             <button
               class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
@@ -310,26 +323,26 @@
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
           </div>
-          <p class="mb-4 text-[14px]">
+          <p class="salary mb-4 text-[14px]">
             San Francisco, CA • Full-time • $130,000 - $175,000
           </p>
           <button
-            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+            class="status cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
           >
             NOT APPLIED
           </button>
-          <p class="mb-3">
+          <p class="jobInfo mb-3">
             We are looking for an experienced Frontend Developer to build
             scalable web applications using React and TypeScript. You will work
             with a talented team on cutting-edge projects.
           </p>
           <button
-            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+            class="interview-btn cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
           >
             INTERVIEW
           </button>
           <button
-            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+            class="rejected-btn cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
           >
             REJECTED
           </button>
@@ -337,8 +350,8 @@
         <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
-              <p class="font-semibold text-[18px]">StartupXYZ</p>
-              <p class="text-[16px]">Full Stack Engineer</p>
+              <p class="jobName font-semibold text-[18px]">StartupXYZ</p>
+              <p class="jobTitle text-[16px]">Full Stack Engineer</p>
             </div>
             <button
               class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
@@ -346,32 +359,32 @@
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
           </div>
-          <p class="mb-4 text-[14px]">
+          <p class="salary mb-4 text-[14px]">
             Remote • Full-time • $120,000 - $160,000
           </p>
           <button
-            class="cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
+            class="status cursor-pointer mb-3 text-[14px] bg-[#EEF4FF] p-2 rounded-[4px] text-[#002C5C]"
           >
             NOT APPLIED
           </button>
-          <p class="mb-3">
+          <p class="jobInfo mb-3">
             Join our fast-growing startup and work on our core platform.
             Experience with Node.js and React required. Great benefits and
             equity package included.
           </p>
           <button
-            class="cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
+            class="interview-btn cursor-pointer border text-[#10B981] p-2 rounded-[4px] hover:bg-[#10B981] hover:text-[#FFFFFF]"
           >
             INTERVIEW
           </button>
           <button
-            class="cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
+            class="rejected-btn cursor-pointer border text-[#EF4444] p-2 rounded-[4px] hover:bg-[#EF4444] hover:text-[#FFFFFF]"
           >
             REJECTED
           </button>
         </div>
       </div>
-    </section>
+    </main>
     <script src="Script/script.js"></script>
   </body>
 </html>

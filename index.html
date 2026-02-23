@@ -44,21 +44,20 @@
           class="pl-4 py-5 w-[360px] rounded-[8px] text-[#323B49] bg-[#FFFFFF] shadow-xl"
         >
           <p class="font-medium">Interview</p>
-          <p id="interview" class="font-bold text-[#10B981]">0</p>
+          <p id="interviewCount" class="font-bold text-[#10B981]">0</p>
         </div>
         <div
           class="pl-4 py-5 w-[360px] rounded-[8px] text-[#323B49] bg-[#FFFFFF] shadow-xl"
         >
           <p class="font-medium">Rejected</p>
-          <p id="rejected" class="font-bold text-[#EF4444]">0</p>
+          <p id="rejectedCount" class="font-bold text-[#EF4444]">0</p>
         </div>
       </div>
     </section>
     <main>
-      <div class="flex justify-between">
+      <div id="jobs-count" class="flex justify-between">
         <p class="font-bold">Available Jobs</p>
-        <br /><br />
-        <p>0 jobs</p>
+        <p id="job-count" class="text-right font-semibold mb-2">0 jobs</p>
       </div>
       <div class="flex gap-3">
         <button
@@ -95,14 +94,14 @@
       </div>
       <br />
       <div id="allCards" class="gap-5 flex flex-col">
-        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+        <div class="job-card bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
               <p class="jobName font-semibold text-[18px]">Mobile First Corp</p>
               <p class="jobTitle text-[16px]">React Native Developer</p>
             </div>
             <button
-              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+              class="delete-btn cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
             >
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
@@ -130,14 +129,14 @@
             REJECTED
           </button>
         </div>
-        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+        <div class="job-card bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
               <p class="jobName font-semibold text-[18px]">WebFlow Agency</p>
               <p class="jobTitle text-[16px]">Web Designer & Developer</p>
             </div>
             <button
-              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+              class="delete-btn cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
             >
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
@@ -165,14 +164,14 @@
             REJECTED
           </button>
         </div>
-        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+        <div class="job-card bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
               <p class="jobName font-semibold text-[18px]">DataViz Solutions</p>
               <p class="jobTitle text-[16px]">Data Visualization Specialist</p>
             </div>
             <button
-              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+              class="delete-btn cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
             >
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
@@ -200,14 +199,14 @@
             REJECTED
           </button>
         </div>
-        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+        <div class="job-card bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
               <p class="jobName font-semibold text-[18px]">CloudFirst Inc</p>
               <p class="jobTitle text-[16px]">Backend Developer</p>
             </div>
             <button
-              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+              class="delete-btn cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
             >
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
@@ -235,14 +234,14 @@
             REJECTED
           </button>
         </div>
-        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+        <div class="job-card bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
               <p class="jobName font-semibold text-[18px]">Innovation Labs</p>
               <p class="jobTitle text-[16px]">UI/UX Engineer</p>
             </div>
             <button
-              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+              class="delete-btn cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
             >
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
@@ -271,7 +270,7 @@
             REJECTED
           </button>
         </div>
-        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+        <div class="job-card bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
               <p class="jobName font-semibold text-[18px]">
@@ -280,7 +279,7 @@
               <p class="jobTitle text-[16px]">JavaScript Developer</p>
             </div>
             <button
-              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+              class="delete-btn cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
             >
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
@@ -309,7 +308,7 @@
             REJECTED
           </button>
         </div>
-        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+        <div class="job-card bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
               <p class="jobName font-semibold text-[18px]">
@@ -318,7 +317,7 @@
               <p class="jobTitle text-[16px]">Senior Frontend Developer</p>
             </div>
             <button
-              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+              class="delete-btn cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
             >
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>
@@ -347,14 +346,14 @@
             REJECTED
           </button>
         </div>
-        <div class="bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
+        <div class="job-card bg-[#FFFFFF] shadow-xl rounded-[8px] p-5">
           <div class="flex justify-between">
             <div>
               <p class="jobName font-semibold text-[18px]">StartupXYZ</p>
               <p class="jobTitle text-[16px]">Full Stack Engineer</p>
             </div>
             <button
-              class="cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
+              class="delete-btn cursor-pointer border rounded-full h-[30px] w-[30px] mb-7"
             >
               <i class="fa-solid fa-trash-can text-[#64748B]"></i>
             </button>

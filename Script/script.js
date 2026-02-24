@@ -29,9 +29,9 @@ function calculateCount() {
   if (currentStatus === "all") {
     jobCountText.innerText = `${totalJobs} jobs`;
   } else if (currentStatus === "interview") {
-    jobCountText.innerText = `${interviewList.length} of ${totalJobs}`;
+    jobCountText.innerText = `${interviewList.length} of ${totalJobs} jobs`;
   } else {
-    jobCountText.innerText = `${rejectedList.length} of ${totalJobs}`;
+    jobCountText.innerText = `${rejectedList.length} of ${totalJobs} jobs`;
   }
 }
 
